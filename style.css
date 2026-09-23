@@ -1,6 +1,3 @@
-/* =========================
-   CONFIGURAÇÃO GERAL
-========================= */
 
 * {
     margin: 0;
@@ -12,31 +9,15 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-/* =========================
-   CONTAINER
-========================= */
-
 .container {
     max-width: 1300px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
 }
-
-
-/* =========================
-   CABEÇALHO
-========================= */
-
 header {
     background-color: #0c0f10;
 }
-
-
-/* =========================
-   NAVBAR
-========================= */
 
 .navbar {
     height: 80px;
@@ -44,11 +25,6 @@ header {
     display: flex;
     align-items: center;
 }
-
-
-/* =========================
-   LOGO
-========================= */
 
 .logo h2 {
     color: white;
@@ -58,11 +34,6 @@ header {
 .logo span {
     color: #72e52d;
 }
-
-
-/* =========================
-   MENU
-========================= */
 
 nav {
     flex: 1;
@@ -90,11 +61,6 @@ nav ul li a:hover {
     color: #72e52d;
 }
 
-
-/* =========================
-   HERO
-========================= */
-
 .Hero {
     position: relative;
 
@@ -104,25 +70,15 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
-
-/* =========================
-   IMAGEM DO HERO
-========================= */
-
 .Hero > img {
     width: 100%;
     height: 100%;
 
     object-fit: cover;
-    object-position: center 2%;
+    object-position: center 2;
 
     display: block;
 }
-
-
-/* =========================
-   ESCURECER A IMAGEM
-========================= */
 
 .Hero::after {
     content: "";
@@ -144,10 +100,6 @@ nav ul li a:hover {
 }
 
 
-/* =========================
-   CONTEÚDO DO HERO
-========================= */
-
 .hero-conteudo {
     position: absolute;
 
@@ -161,9 +113,6 @@ nav ul li a:hover {
     color: white;
 }
 
-
-/* TÍTULO */
-
 .hero-conteudo h1 {
     font-size: 55px;
     line-height: 1.1;
@@ -175,9 +124,6 @@ nav ul li a:hover {
     color: #72e52d;
 }
 
-
-/* TEXTO */
-
 .hero-conteudo p {
     color: white;
 
@@ -186,11 +132,6 @@ nav ul li a:hover {
 
     margin-bottom: 30px;
 }
-
-
-/* =========================
-   BOTÃO
-========================= */
 
 .btn-hero {
     display: inline-block;
