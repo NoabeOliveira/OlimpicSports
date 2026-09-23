@@ -153,3 +153,92 @@ nav ul li a:hover {
 .btn-hero:hover {
     background-color: white;
 }
+
+
+.produtos {
+    background-color: #f8f9fa;
+}
+
+
+
+.produtos h2 {
+    font-weight: 700;
+}
+
+.produtos .text-center > p {
+    color: #666;
+}
+
+
+.produtos .card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.produtos .card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.produtos .card-img-top {
+    width: 100%;
+    height: 300px;
+
+    object-fit: contain;
+
+    padding: 20px;
+
+    background-color: #ffffff;
+}
+
+.produtos .card-body {
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.categoria-produto {
+    color: #198754;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+
+.produtos .card-title {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+
+.produtos .card-text {
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+
+.produtos .card h4 {
+    font-size: 25px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.produto-final .btn-success {
+    width: 100%;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 8px;
+}
