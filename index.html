@@ -54,29 +54,113 @@
 
    <main>
         
-         <section class="Hero">
 
-             <img src="imagens/logoR.png" alt="Jogador de futebol">
+<section
+    id="carouselEsportes"
+    class="carousel slide Hero"
+    data-bs-ride="carousel"
+    data-bs-interval="5000">
 
-             <div class="hero-conteudo">
+    <div class="carousel-indicators">
 
-            <h1>
-                VIVA O ESPORTE.<br>
-                <span>SUPERE SEUS LIMITES.</span>
-            </h1>
+        <button
+            type="button"
+            data-bs-target="#carouselEsportes"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1">
+        </button>
 
-            <p>
-                Encontre os melhores produtos para cada modalidade.<br>
-                Qualidade, desempenho e estilo em um só lugar.
-            </p>
+        <button
+            type="button"
+            data-bs-target="#carouselEsportes"
+            data-bs-slide-to="1"
+            aria-label="Slide 2">
+        </button>
 
-            <a href="#produtos" class="btn-hero">
-                VER PRODUTOS
-            </a>
+        <button
+            type="button"
+            data-bs-target="#carouselEsportes"
+            data-bs-slide-to="2"
+            aria-label="Slide 3">
+        </button>
 
-             </div>
+    </div>
 
-        </section>
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+
+            <img
+                src="imagens/logoR.png"
+                class="d-block w-100"
+                alt="Futebol">
+
+        </div>
+
+        <div class="carousel-item">
+
+            <img
+                src="imagens/Basqt.jpg"
+                class="d-block w-100"
+                alt="Basquete">
+
+        </div>
+
+        <div class="carousel-item">
+
+            <img
+                src="imagens/cor.jpg"
+                class="d-block w-100"
+                alt="Corrida">
+
+        </div>
+
+    </div>
+
+    <div class="hero-conteudo">
+
+        <h1>
+            VIVA O ESPORTE.<br>
+            <span>SUPERE SEUS LIMITES.</span>
+        </h1>
+
+        <p>
+            Encontre os melhores produtos para cada modalidade.<br>
+            Qualidade, desempenho e estilo em um só lugar.
+        </p>
+
+        <a href="#produtos" class="btn-hero">
+            VER PRODUTOS
+        </a>
+
+    </div>
+
+    <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselEsportes"
+        data-bs-slide="prev">
+
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+
+    </button>
+
+    <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselEsportes"
+        data-bs-slide="next">
+
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Próximo</span>
+
+    </button>
+
+</section>
+
 
 
          <section
@@ -416,6 +500,7 @@
         </div>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

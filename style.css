@@ -69,14 +69,19 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
-.Hero > img {
+.Hero .carousel-inner {
+    height: 100%;
+}
+
+.Hero .carousel-item {
+    height: 650px;
+}
+
+.Hero .carousel-item img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-    object-position: center 2;
-
-    display: block;
+    object-position: center;
 }
 
 .Hero::after {
@@ -97,7 +102,6 @@ nav ul li a:hover {
             rgba(0, 0, 0, 0.10)
         );
 }
-
 
 .hero-conteudo {
     position: absolute;
@@ -157,7 +161,6 @@ nav ul li a:hover {
 .produtos {
     background-color: #f8f9fa;
 }
-
 
 
 .produtos h2 {
@@ -241,9 +244,6 @@ nav ul li a:hover {
     font-weight: 600;
     border-radius: 8px;
 }
-
-
-/* ================= FOOTER ================= */
 
 .footer {
     background-color: #0c0f10;
