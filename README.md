@@ -5,8 +5,8 @@
 ---
 
 ## Links Úteis
-- **Site publicado:** [Acessar site online]([colocar o link aqui])
-- **Repositório oficial:** [GitHub - OlimpicSports](https://github.com/NoabeOliveira/OlimpicSports)
+- **Site publicado:** https://noabeoliveira.github.io/OlimpicSports/
+- **Repositório oficial:** https://github.com/NoabeOliveira/OlimpicSports
 
 ---
 
