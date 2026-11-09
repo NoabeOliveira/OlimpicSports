@@ -17,6 +17,7 @@ A **OlimpicSports** é uma loja fictícia de artigos esportivos criada para fins
 - **Cabeçalho:** Logo e menu de navegação responsivo (*Início, Produtos, Categorias, Ofertas, Sobre, Contato e Conta*).
 - **Banner Principal:** Carrossel interativo com 3 imagens e botão de chamada para ação (*"Ver produtos"*).
 - **Produtos em Destaque:** Seção com 6 cards estilizados contendo tênis, camisa esportiva, bola de futebol, chuteira, óculos esportivo e camisa de basquete.
+- **Checkout demonstrativo:** Permite finalizar a compra de um produto por vez, revisar a quantidade e simular a confirmação do pedido. Os dados ficam no `localStorage` do navegador; não há cobrança real.
 - **Rodapé:** Descrição da loja, links úteis, informações de contato, endereço, horário de funcionamento e ícones de redes sociais.
 
 ---
@@ -29,5 +30,6 @@ O projeto combina HTML semântico com frameworks de estilização:
 * **CSS3 (`style.css`):** Estilização customizada com uso de *Flexbox* e *Media Queries* para garantir responsividade em tablets e celulares.
 * **Bootstrap 5.3.8 (via CDN):** Utilizado em conjunto com o CSS customizado para estruturar a navbar (menu hambúrguer), carrossel, cards, botões e o sistema de grid. *(Nota: a identidade visual, cores e rodapé vêm do nosso `style.css`)*.
 * **Bootstrap Icons 1.11.3 (via CDN):** Ícones utilizados no rodapé.
+* **JavaScript (`app.js` e `checkout.js`):** Eventos de interface e checkout demonstrativo com persistência no `localStorage`.
 * **Git e GitHub:** Controle de versão do código-fonte.
 * **GitHub Pages / Vercel:** Hospedagem e publicação do site.
