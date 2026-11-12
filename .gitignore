@@ -1,1 +1,7 @@
-.DS_Store
+.data/
+node_modules/
+.env
+uploads/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal

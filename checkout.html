@@ -1,120 +1,85 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="OlimpicSports - loja de artigos esportivos"><title>Finalizar compra — OlimpicSports</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Finalizar Compra - OlimpicSports</title>
+                <a class="navbar-brand logo" href="index.html">
+                    <h2>Olimpic<span>Sports</span></h2>
+                </a>
 
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet">
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-expanded="false"
+                    aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="categorias.html">Categorias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html" data-account-link>Entrar</a></li>
+                    </ul>
+                </div>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+            </div>
+        </nav>
+    </header><main><section class="page-heading"><div class="container"><span class="eyebrow">ETAPA FINAL</span><h1>Finalizar compra</h1><p>Pedido demonstrativo — nenhum pagamento real será realizado.</p></div></section><section class="container py-5"><div class="row g-4"><div class="col-lg-6"><div class="summary-card"><h3>Resumo do pedido</h3><div id="checkout-summary"><p>Carregando...</p></div></div></div><div class="col-lg-6"><div class="summary-card"><h3>Entrega e pagamento</h3><form id="checkout-form"><label for="checkout-address" class="form-label mt-3">Endereço de entrega</label><select id="checkout-address" class="form-select mb-2" required></select><div id="address-warning" class="mb-3"></div><label for="checkout-payment" class="form-label">Forma de pagamento</label><select id="checkout-payment" class="form-select mb-3" required><option value="">Selecione</option><option value="pix">PIX (simulado)</option><option value="cartao">Cartão (simulado, sem informar dados)</option><option value="boleto">Boleto (simulado)</option></select><div hidden><label for="checkout-installments" class="form-label">Parcelamento</label><select id="checkout-installments" class="form-select mb-3"><option value="1">1x sem juros</option><option value="2">2x sem juros</option><option value="3">3x sem juros</option><option value="4">4x sem juros</option><option value="5">5x sem juros</option><option value="6">6x sem juros</option></select></div><p class="small text-muted">Atenção: este site acadêmico não processa dinheiro, não gera cobranças e não efetua envios reais.</p><button type="submit" class="btn btn-success w-100 btn-lg">Confirmar pedido demonstrativo</button></form></div></div></div></section></main><footer class="footer">
 
-<body>
+        <div class="container">
 
-    <header class="py-4 text-center">
-        <a href="index.html" class="text-decoration-none">
-            <h2 class="text-white">
-                Olimpic<span style="color:#72e52d">Sports</span>
-            </h2>
-        </a>
-    </header>
+            <div class="row g-4 footer-topo">
 
-    <main class="container py-5">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="footer-logo">Olimpic<span>Sports</span></h3>
+                    <p class="footer-texto">
+                        Qualidade, desempenho e estilo em um só lugar.
+                        Tudo o que você precisa para superar seus limites.
+                    </p>
+                </div>
 
-        <h2 class="mb-4">Finalizar Compra</h2>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-titulo">Navegação</h5>
+                    <ul class="footer-lista">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </div>
 
-        <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-titulo">Contato</h5>
+                    <ul class="footer-lista">
+                        <li><i class="bi bi-envelope"></i> <a href="mailto:contato@olimpicsports.com.br">contato@olimpicsports.com.br</a></li>
+                        <li><i class="bi bi-telephone"></i> <a href="tel:+5511900000000">(11) 90000-0000</a></li>
+                        <li><i class="bi bi-geo-alt"></i> Av. do Esporte, 1000 - Centro<br>São Paulo - SP</li>
+                        <li><i class="bi bi-clock"></i> Seg a Sex, 9h às 18h</li>
+                    </ul>
+                </div>
 
-            <section class="col-md-6">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-titulo">Redes Sociais</h5>
+                    <div class="footer-redes">
+                        <a href="#" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="X" title="X"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                    <p class="footer-texto mt-3">@olimpicsports</p>
+                </div>
 
-                <h4>Resumo do pedido</h4>
-                <div id="resumoPedido" class="mb-3" aria-live="polite"></div>
-                <label for="quantidade">Quantidade</label>
-                <input type="number" id="quantidade" class="form-control mb-3" min="1" max="99" value="1">
-                <h4 id="valorTotal"></h4>
+            </div>
 
-            </section>
-
-            <section class="col-md-6">
-
-                <h4>Dados do comprador</h4>
-
-                <form id="formCompra">
-
-                    <label for="nomeCliente">Nome completo</label>
-                    <input
-                        type="text"
-                        id="nomeCliente"
-                        class="form-control mb-3"
-                        required>
-
-                    <label for="emailCliente">E-mail</label>
-                    <input
-                        type="email"
-                        id="emailCliente"
-                        class="form-control mb-3"
-                        required>
-
-                    <label for="pagamento">Forma de pagamento</label>
-
-                    <select id="pagamento" class="form-select mb-3" required>
-                        <option value="">Selecione</option>
-                        <option value="pix">PIX</option>
-                        <option value="cartao">Cartão de crédito</option>
-                        <option value="boleto">Boleto</option>
-                    </select>
-                    <!-- Opções de cartão -->
-<div id="areaCartao" style="display: none;">
-
-    <label for="parcelas">Número de parcelas</label>
-
-    <select id="parcelas" class="form-select mb-3">
-        <option value="">Selecione as parcelas</option>
-    </select>
-
-    <p id="resumoParcelas"></p>
-
-</div>
-
-<!-- Opções de PIX -->
-<div id="areaPix" style="display: none;">
-
-    <h5>Pagamento via PIX</h5>
-
-    <div id="qrcodePix"></div>
-
-    <p class="mt-3 text-muted">
-        QR Code demonstrativo.
-        Nenhuma cobrança será realizada.
-    </p>
-
-</div>
-
-<!-- Opções de boleto -->
-<div id="areaBoleto" style="display: none;">
-    <p>Boleto demonstrativo, sem cobrança real.</p>
-</div>
-
-                    <button id="confirmarCompra" type="submit" class="btn btn-success w-100">
-                        Confirmar Compra
-                    </button>
-
-                </form>
-
-                <p id="mensagemCompra" class="mt-3" role="status"></p>
-
-            </section>
+            <div class="footer-base">
+                <p>&copy; 2026 OlimpicSports. Todos os direitos reservados.</p>
+                <p>Projeto acadêmico - dados de contato fictícios.</p>
+            </div>
 
         </div>
 
-    </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <script src="checkout.js"></script>
-</body>
-</html>
+    </footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script><script src="store.js"></script><script src="checkout.js"></script></body></html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="OlimpicSports - loja de artigos esportivos"><title>Painel administrativo — OlimpicSports</title><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body><header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+
+
+                <a class="navbar-brand logo" href="index.html">
+                    <h2>Olimpic<span>Sports</span></h2>
+                </a>
+
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal" aria-expanded="false"
+                    aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="produtos.html">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="categorias.html">Categorias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html" data-account-link>Entrar</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header><main><section class="page-heading"><div class="container"><span class="eyebrow">ACESSO RESTRITO</span><h1><i class="bi bi-speedometer2"></i> Painel Administrativo</h1><p>Gestão de catálogo, estoque, pedidos e controles financeiros.</p></div></section><section class="container py-5"><div class="admin-nav mb-4"><button type="button" data-admin-tab="visao" class="admin-tab">Visão geral</button><button type="button" data-admin-tab="produtos" class="admin-tab">Produtos</button><button type="button" data-admin-tab="pedidos" class="admin-tab">Pedidos</button><button type="button" data-admin-tab="estoque" class="admin-tab">Estoque</button><button type="button" data-admin-tab="financeiro" class="admin-tab">Financeiro</button><button type="button" data-admin-tab="usuarios" class="admin-tab">Clientes</button></div>
+<div id="admin-visao" class="admin-pane"><h2>Visão geral</h2><div class="row g-3"><div class="col-md-3"><div class="metric-box"><span>Produtos ativos</span><strong id="metric-products">—</strong></div></div><div class="col-md-3"><div class="metric-box"><span>Unidades em estoque</span><strong id="metric-stock">—</strong></div></div><div class="col-md-3"><div class="metric-box"><span>Clientes e admin</span><strong id="metric-users">—</strong></div></div><div class="col-md-3"><div class="metric-box"><span>Pedidos (todos)</span><strong id="metric-orders">—</strong></div></div></div><div class="metric-box mt-3"><span>Volume de pedidos simulados (não é faturamento recebido)</span><strong id="metric-simulated">—</strong></div><p class="mt-3 text-muted">Valores de compras demonstrativas não são registrados automaticamente como receita efetiva.</p></div>
+<div id="admin-produtos" class="admin-pane" hidden><h2>Gerenciamento de produtos</h2><div class="admin-form"><h4 id="product-form-title">Adicionar produto</h4><form id="admin-product-form"><input type="hidden" name="product_id"><div class="row g-3"><div class="col-md-8"><label class="form-label">Nome</label><input name="name" class="form-control" maxlength="100" required></div><div class="col-md-4"><label class="form-label">Categoria</label><input name="category" class="form-control" list="known-categories" required><datalist id="known-categories"><option value="Futebol"><option value="Corrida"><option value="Basquete"><option value="Natação"><option value="Fitness"></datalist></div><div class="col-12"><label class="form-label">Descrição</label><textarea name="description" class="form-control" rows="2" required></textarea></div><div class="col-md-4"><label class="form-label">Preço em R$</label><input name="price" class="form-control" type="number" step="0.01" min="0.01" required></div><div class="col-md-4"><label class="form-label">Quantidade em estoque</label><input name="stock" class="form-control" type="number" min="0" step="1" required></div><div class="col-md-4"><label class="form-label">Imagem existente ou HTTPS</label><input name="image" class="form-control" placeholder="imagens/bola.jpg"></div><div class="col-md-8"><label class="form-label">Ou enviar uma imagem (JPG, PNG, WebP, até 2,5 MB)</label><input name="upload" class="form-control" type="file" accept=".jpg,.jpeg,.png,.webp"></div><div class="col-md-4"><div class="form-check"><input name="featured" class="form-check-input" type="checkbox" id="prod-featured"><label for="prod-featured">Destaque inicial</label></div><div class="form-check mt-2"><input name="offer" class="form-check-input" type="checkbox" id="prod-offer"><label for="prod-offer">Marcar como oferta</label></div></div></div><div class="mt-3"><button class="btn btn-success" type="submit">Salvar produto</button> <button id="product-reset" type="button" class="btn btn-outline-secondary">Novo / limpar</button></div></form></div><div class="table-responsive mt-4"><table class="table align-middle"><thead><tr><th>Imagem</th><th>Produto</th><th>Preço</th><th>Estoque</th><th>Ações</th></tr></thead><tbody id="admin-products-table"></tbody></table></div></div>
+<div id="admin-pedidos" class="admin-pane" hidden><h2>Gestão de pedidos</h2><p class="text-muted">Os pedidos são demonstrativos. Cancelamentos devolvem quantidades ao estoque.</p><div class="table-responsive"><table class="table align-middle"><thead><tr><th>Pedido</th><th>Cliente</th><th>Itens</th><th>Total</th><th>Status</th></tr></thead><tbody id="admin-orders-table"></tbody></table></div></div>
+<div id="admin-estoque" class="admin-pane" hidden><h2>Histórico do estoque</h2><p>Para ajustar o estoque, use a edição do produto. Toda alteração de quantidade é registrada abaixo.</p><div class="table-responsive"><table class="table"><thead><tr><th>Data</th><th>Produto</th><th>Variação</th><th>Motivo</th></tr></thead><tbody id="admin-stock-table"></tbody></table></div></div>
+<div id="admin-financeiro" class="admin-pane" hidden><h2>Controle financeiro</h2><p class="text-muted"><strong>Importante:</strong> pedidos simulados não representam pagamentos recebidos. Registre receitas e despesas reais ou fictícias manualmente, identificando-as corretamente.</p><div class="row g-3"><div class="col-md-3"><div class="metric-box"><span>Total demonstrativo</span><strong id="fin-simulated">—</strong></div></div><div class="col-md-3"><div class="metric-box"><span>Receitas lançadas</span><strong id="fin-income">—</strong></div></div><div class="col-md-3"><div class="metric-box"><span>Despesas lançadas</span><strong id="fin-expense">—</strong></div></div><div class="col-md-3"><div class="metric-box"><span>Saldo manual</span><strong id="fin-balance">—</strong></div></div></div><div class="admin-form mt-4"><h4>Adicionar lançamento financeiro</h4><form id="admin-finance-form"><div class="row g-3"><div class="col-md-3"><label class="form-label">Tipo</label><select name="type" class="form-select"><option value="receita">Receita</option><option value="despesa">Despesa</option></select></div><div class="col-md-3"><label class="form-label">Categoria</label><input name="category" class="form-control" required placeholder="Venda, aluguel..."></div><div class="col-md-3"><label class="form-label">Valor em R$</label><input name="amount" type="number" class="form-control" required min="0.01" step="0.01"></div><div class="col-md-3"><label class="form-label">Descrição</label><input name="note" class="form-control" required></div></div><button class="btn btn-success mt-3" type="submit">Registrar lançamento</button></form></div><div class="table-responsive mt-4"><table class="table"><thead><tr><th>Data</th><th>Tipo</th><th>Categoria</th><th>Descrição</th><th>Valor</th><th>Ação</th></tr></thead><tbody id="admin-finance-table"></tbody></table></div></div>
+<div id="admin-usuarios" class="admin-pane" hidden><h2>Contas cadastradas</h2><div class="table-responsive"><table class="table"><thead><tr><th>ID</th><th>Nome</th><th>E-mail</th><th>Perfil</th><th>Criado em</th></tr></thead><tbody id="admin-users-table"></tbody></table></div></div></section></main><footer class="footer">
+
+        <div class="container">
+
+            <div class="row g-4 footer-topo">
+
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="footer-logo">Olimpic<span>Sports</span></h3>
+                    <p class="footer-texto">
+                        Qualidade, desempenho e estilo em um só lugar.
+                        Tudo o que você precisa para superar seus limites.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-titulo">Navegação</h5>
+                    <ul class="footer-lista">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="categorias.html">Categorias</a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-titulo">Contato</h5>
+                    <ul class="footer-lista">
+                        <li><i class="bi bi-envelope"></i> <a href="mailto:contato@olimpicsports.com.br">contato@olimpicsports.com.br</a></li>
+                        <li><i class="bi bi-telephone"></i> <a href="tel:+5511900000000">(11) 90000-0000</a></li>
+                        <li><i class="bi bi-geo-alt"></i> Av. do Esporte, 1000 - Centro<br>São Paulo - SP</li>
+                        <li><i class="bi bi-clock"></i> Seg a Sex, 9h às 18h</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-titulo">Redes Sociais</h5>
+                    <div class="footer-redes">
+                        <a href="#" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="X" title="X"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                    <p class="footer-texto mt-3">@olimpicsports</p>
+                </div>
+
+            </div>
+
+            <div class="footer-base">
+                <p>&copy; 2026 OlimpicSports. Todos os direitos reservados.</p>
+                <p>Projeto acadêmico - dados de contato fictícios.</p>
+            </div>
+
+        </div>
+
+    </footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script><script src="store.js"></script><script src="admin.js"></script></body></html>
